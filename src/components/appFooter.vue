@@ -4,7 +4,7 @@
 <div class="collegamenti">
     <ul class="collegamenti-list">
       <li v-for="link in linkImgArray" :key="link.icon">
-        <img :src="link.icon" alt="">
+        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
         <a :href="link.url"
         >{{ link.text }}</a>
       </li>
@@ -56,9 +56,21 @@
         </ul>
        </div>
     </div>
-    <img src="../assets/img/dc-logo-bg.png" alt="">
+    <div class="flogo">
+        <img src="../assets/img/dc-logo-bg.png" alt="">
+    </div>
 </div>
-<div class="sing-in"></div>
+<div class="sing-in">
+    <div class="abutton"><a href=""> SING-UP NOW!</a></div>
+    <div class="social">
+        <h3>FOLLOW US</h3>
+        <img src="../assets/img/footer-facebook.png" alt="">
+        <img src="../assets/img/footer-twitter.png" alt="">
+        <img src="../assets/img/footer-youtube.png" alt="">
+        <img src="../assets/img/footer-pinterest.png" alt="">
+        <img src="../assets/img/footer-periscope.png" alt="">
+    </div>
+</div>
 </template>
 
 
@@ -143,16 +155,15 @@ export default {
         color: white;
         display: flex;
     }
-    .info>img{
-        height: 600px;
+    .flogo{
+        height: 100%;
+        overflow: hidden;
+    }
+    .flogo>img{
+        height: 700px;
         position: relative;
         top: -90px;
-        z-index: 0;
-    }
-    .sing-in{
-        width: 100%;
-        height: 120px;
-        background-color: #303030;
+        overflow: hidden;
     }
     ul{
         list-style: none;
@@ -162,5 +173,33 @@ export default {
         color: grey;
         padding-top: 5px;
     }
-
+    .sing-in{
+        width: 100%;
+        height: 120px;
+        background-color: #303030;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .abutton{
+        margin-left: 300px;
+        padding: 10px;
+        border: 2px solid #0282F9;
+    }
+    .social{
+        width: 30%;
+        display: flex;
+        margin-right: 200px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .social>img{
+        height: 40px;
+        padding: 0 10px;
+    }
+    .social>h3{
+        color: #0282F9;
+        font-size: 1.5rem;
+        padding-right: 10px;
+    }
 </style>
