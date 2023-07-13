@@ -8,7 +8,8 @@
     <div class="link">
         <ul class="link-list">
       <li v-for="link in linkArray" :key="link.url">
-        <a :href="link.url">{{ link.text }}</a>
+        <a :href="link.url"
+        >{{ link.text }}</a>
       </li>
     </ul>
     </div>
