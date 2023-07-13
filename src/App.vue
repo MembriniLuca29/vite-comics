@@ -1,24 +1,21 @@
 <script >
 import appHeader from './components/appHeader.vue';
-import appMain from './components/appMain.vue';
-import appFooter from './components/appFooter.vue';
 export default {
   data() {
     return { count: 0 }
   },
   components:{
     appHeader,
-    appMain,
-    appFooter
   }
 }
 </script>
 
 <template>
-<appHeader/>
-<appMain/>
-<appFooter/>
-
+  <appHeader/>
+  <div>
+  <h1>prova</h1>
+  </div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style lang="scss" scoped>
