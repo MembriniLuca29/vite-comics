@@ -4,7 +4,7 @@
 <div class="collegamenti">
     <ul class="collegamenti-list">
       <li v-for="link in linkImgArray" :key="link.icon">
-        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+        <img :src="getImagePath()" alt="">
         <a :href="link.url"
         >{{ link.text }}</a>
       </li>
@@ -104,13 +104,20 @@ export default {
           text: 'DC POWER VISA',
           url: '',
         },
+        
         ]
     };
-  }
+  
+  },
+  methods: {
+            getImagePath: function(img) {
+                return new URL(`../asset/img/${img}`, import.meta.url).href;
+            }
+        }
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
     .collegamenti{
         width: 100%;
         height: 150px;
@@ -122,19 +129,18 @@ export default {
         display: flex;
         list-style: none;
         justify-content: center;
-        
-    }
-    .collegamenti-list>li{
-        padding: 0 50px;
-        font-size: 1rem;
-        
-    }
-    li>img{
-        color: white;
-        height: 80px;
-        position: relative;
-        top: 30px;
-        right: 10px;
+
+        li{
+            padding: 0 50px;
+            font-size: 1rem;
+                img{
+                color: white;
+                height: 80px;
+                position: relative;
+                top: 30px;
+                right: 10px;
+        }
+        }
     }
     a{
         text-decoration: none;
@@ -158,12 +164,13 @@ export default {
     .flogo{
         height: 100%;
         overflow: hidden;
-    }
-    .flogo>img{
-        height: 700px;
-        position: relative;
-        top: -90px;
-        overflow: hidden;
+
+        img{
+            height: 700px;
+            position: relative;
+            top: -90px;
+            overflow: hidden;
+        }
     }
     ul{
         list-style: none;
@@ -172,7 +179,12 @@ export default {
     .column-info>ul>li{
         color: grey;
         padding-top: 5px;
+        &:hover{
+        cursor: pointer;
+        color: white;
     }
+    }
+
     .sing-in{
         width: 100%;
         height: 120px;
@@ -185,6 +197,11 @@ export default {
         margin-left: 300px;
         padding: 10px;
         border: 2px solid #0282F9;
+
+        &:hover {
+            transform: scale(1.5);
+            transition: 1s;
+        }
     }
     .social{
         width: 30%;
@@ -192,14 +209,17 @@ export default {
         margin-right: 200px;
         justify-content: flex-end;
         align-items: center;
+
+        img{
+            height: 40px;
+            padding: 0 10px;
+        }
+
+        h3{
+            color: #0282F9;
+            font-size: 1.5rem;
+            padding-right: 10px;
+        }
     }
-    .social>img{
-        height: 40px;
-        padding: 0 10px;
-    }
-    .social>h3{
-        color: #0282F9;
-        font-size: 1.5rem;
-        padding-right: 10px;
-    }
+   
 </style>

@@ -39,7 +39,7 @@ export default {
 };
 </script>
     
-    <style scoped>
+    <style scoped lang="scss">
         .container{
             background-color: white;
             width:100%;
@@ -76,13 +76,12 @@ export default {
         a{
             text-decoration: none;
             color:black;
-        }
-
-        a:hover{
+            &:hover{
             color: #0282F9;
             border-bottom: 5px solid #0282F9;
             padding-bottom: 40px;
 
+        }
         }
 
     </style>

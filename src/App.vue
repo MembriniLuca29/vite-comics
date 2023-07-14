@@ -17,9 +17,9 @@ export default {
 <template>
   <header>
   <appHeader/></header>
-  <main>
+
   <appMain/>
-  </main>
+
   <footer>
     <appFooter/>
   </footer>
